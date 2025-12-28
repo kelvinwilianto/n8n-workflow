@@ -1,0 +1,9 @@
+# Environment variables
+.env
+
+# n8n data
+workflows/
+credentials/
+
+# Docker volumes
+*.log
