@@ -80,28 +80,28 @@ docker-compose exec n8n n8n export:credentials --backup --output=/home/node/.n8n
 
 # Makefile Command
 ## Main Commands
-make help - Display all available commands
-make setup - Initial setup (creates .env and generates encryption key)
-make install - Full installation (setup + build + start)
+`make help` - Display all available commands
+`make setup` - Initial setup (creates .env and generates encryption key)
+`make install` - Full installation (setup + build + start)
 
 ## Docker Operations
-make build - Build the Docker image
-make up - Start n8n in detached mode
-make down - Stop and remove containers
-make start/stop/restart - Container lifecycle management
-make logs - View logs (follow mode)
-make ps/status - Check container status
+`make build` - Build the Docker image
+`make up` - Start n8n in detached mode
+`make down` - Stop and remove containers
+`make start/stop/restart` - Container lifecycle management
+`make logs` - View logs (follow mode)
+`make ps/status` - Check container status
 
 ## Development
-make shell - Open shell in n8n container
-make rebuild - Rebuild and restart
-make update - Pull latest n8n image and update
-make dev - Start with visible logs
+`make shell` - Open shell in n8n container
+`make rebuild` - Rebuild and restart
+`make update` - Pull latest n8n image and update
+`make dev` - Start with visible logs
 
 ## Backup & Restore
-make backup - Create timestamped backup of workflows/credentials
-make restore BACKUP=file - Restore from backup file
+`make backup` - Create timestamped backup of workflows/credentials
+`make restore BACKUP=file` - Restore from backup file
 
 ## Cleanup
-make clean - Remove stopped containers and volumes
-make clean-all - Remove everything including images and backups
+`make clean` - Remove stopped containers and volumes
+`make clean-all` - Remove everything including images and backups
