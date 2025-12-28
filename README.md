@@ -44,32 +44,24 @@ Edit the `.env` file to customize:
 
 ## Management Commands
 
-Start n8n:
+The easiest way to manage this project is using the Makefile. Run `make help` to see all available commands.
+
+Quick commands:
 ```bash
-docker-compose up -d
+make install    # Full installation
+make up         # Start n8n
+make down       # Stop n8n
+make logs       # View logs
+make restart    # Restart n8n
+make backup     # Backup workflows and credentials
 ```
 
-Stop n8n:
+Manual Docker Compose commands (alternative):
 ```bash
-docker-compose down
-```
-
-View logs:
-```bash
-docker-compose logs -f n8n
-```
-
-Restart n8n:
-```bash
-docker-compose restart
-```
-
-## Backup
-
-To backup your workflows and credentials:
-```bash
-docker-compose exec n8n n8n export:workflow --backup --output=/home/node/.n8n/workflows/
-docker-compose exec n8n n8n export:credentials --backup --output=/home/node/.n8n/credentials/
+docker-compose up -d        # Start n8n
+docker-compose down         # Stop n8n
+docker-compose logs -f n8n  # View logs
+docker-compose restart      # Restart n8n
 ```
 
 ## Additional Resources
@@ -77,8 +69,10 @@ docker-compose exec n8n n8n export:credentials --backup --output=/home/node/.n8n
 - [n8n Documentation](https://docs.n8n.io/)
 - [n8n Community](https://community.n8n.io/)
 
+---
 
-# Makefile Command
+# Makefile Commands Reference
+
 ## Main Commands
 `make help` - Display all available commands
 `make setup` - Initial setup (creates .env and generates encryption key)

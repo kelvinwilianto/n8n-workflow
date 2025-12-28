@@ -1,5 +1,6 @@
 services:
   app:
+    container_name: n8n
     build:
       context: .
       dockerfile: Dockerfile
