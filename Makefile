@@ -113,7 +113,7 @@ status:
 ## shell: Open a shell in the n8n container
 shell:
 	@echo "$(GREEN)Opening shell in n8n container...$(NC)"
-	docker-compose -f $(COMPOSE_FILE) exec n8n sh
+	docker exec -it n8n sh
 
 ## rebuild: Rebuild and restart n8n
 rebuild: down build up
