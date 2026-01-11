@@ -29,6 +29,8 @@ services:
       - n8n_data:/home/node/.n8n
       # - ./workflows:/home/node/.n8n/workflows
       # - ./credentials:/home/node/.n8n/credentials
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     networks:
       - n8n_network
 
