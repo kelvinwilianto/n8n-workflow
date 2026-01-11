@@ -41,5 +41,5 @@ volumes:
 networks:
   n8n_network:
     driver: bridge
-  postgre-docker_postgres_network:
+  postgres_network:
     external: true
