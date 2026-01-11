@@ -33,6 +33,7 @@ services:
       - "host.docker.internal:host-gateway"
     networks:
       - n8n_network
+      - postgres_network
 
 volumes:
   n8n_data:
